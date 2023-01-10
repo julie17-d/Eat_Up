@@ -2,10 +2,22 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class second_page : AppCompatActivity() {
+    //var recipeList : ArrayList<RecipeX> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_second_page)
+        //remplirLesPlanetes()
+        val recyclerView : RecyclerView = findViewById(R.id.recycler_view)
+        with(recyclerView) {
+            layoutManager = LinearLayoutManager(this@second_page)
+            adapter = Adapter(recipeListObject.recipeList, context)
+        }
+    }
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_page)
 
@@ -15,5 +27,5 @@ class second_page : AppCompatActivity() {
         for(name in names) {
             textView.append(name + " ")
         }
-    }
+    }*/
 }

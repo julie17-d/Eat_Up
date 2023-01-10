@@ -13,6 +13,7 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val intent = Intent(this, second_page::class.java)
         setContentView(R.layout.activity_main)
         val get = findViewById<Button>(R.id.ApiBtn)
         val searchBarText = findViewById<TextInputEditText>(R.id.text_search_bar) as EditText
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity() {
                         val recipes = response.body()!!
                         Log.d("response", recipes.hits[0].recipe.label)
                         // Update UI with recipe data
+                        for (recipe in recipes.hits) {
+                            recipeListObject.recipeList.add(recipe.recipe)
+                        }
+                        startActivity(intent)
                     }
                 }
                 override fun onFailure(call: Call<HealthModel>, t: Throwable) {
@@ -42,8 +47,12 @@ class MainActivity : AppCompatActivity() {
         }
         val button = findViewById<Button>(R.id.go_second_page)
         button.setOnClickListener{
-            val intent = Intent(this, second_page::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, second_page::class.java)
+            //startActivity(intent)
         }
     }
+}
+
+object recipeListObject {
+    var recipeList : ArrayList<RecipeX> = ArrayList()
 }
