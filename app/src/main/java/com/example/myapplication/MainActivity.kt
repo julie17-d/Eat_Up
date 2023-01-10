@@ -3,7 +3,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -13,10 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val get = findViewById<Button>(R.id.ApiBtn)
+        val searchBarText = findViewById<TextInputEditText>(R.id.text_search_bar) as EditText
         get.setOnClickListener {
+            val query = searchBarText.text.toString()
             val fetch = Fetch.service
             // val response = fetch.getRecipes("chicken", "bf609ed4", "12b3eea3417cea7f8b96953e19937f56", "public")
-            val call = fetch.getHealthModel("chicken", "bf609ed4", "12b3eea3417cea7f8b96953e19937f56", "public")
+            val call = fetch.getHealthModel(query, "bf609ed4", "12b3eea3417cea7f8b96953e19937f56", "public")
 
             call.enqueue(object : Callback<HealthModel>{
                 override fun onResponse(
@@ -27,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                         Log.e("success", "success")
 
                         val recipes = response.body()!!
-                        Log.d("response", recipes.toString())
+                        Log.d("response", recipes.hits[0].recipe.label)
                         // Update UI with recipe data
                     }
                 }
