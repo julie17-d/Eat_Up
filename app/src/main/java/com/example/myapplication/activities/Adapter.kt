@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.myapplication.R
+import com.example.myapplication.RecipeX
+import com.example.myapplication.`object`.Utils
 
 class Adapter(private val recipeList: ArrayList<RecipeX>, private val context: Context)
     : RecyclerView.Adapter<Adapter.ViewHolder>(){

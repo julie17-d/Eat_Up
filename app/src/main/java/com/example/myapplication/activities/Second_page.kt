@@ -1,9 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.recipeListObject
 
 class second_page : AppCompatActivity() {
     //var recipeList : ArrayList<RecipeX> = ArrayList()

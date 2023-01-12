@@ -5,6 +5,8 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.`object`.Fetch
+import com.example.myapplication.activities.second_page
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,7 +18,7 @@ class Home : AppCompatActivity() {
         val intent = Intent(this, second_page::class.java)
         setContentView(R.layout.activity_home)
         val get = findViewById<Button>(R.id.ApiBtn)
-        val searchBarText = findViewById<TextInputEditText>(R.id.text_search_bar) as EditText
+        val searchBarText = findViewById<TextInputEditText>(R.id.text_search_ba) as EditText
         get.setOnClickListener {
             val query = searchBarText.text.toString()
             val fetch = Fetch.service

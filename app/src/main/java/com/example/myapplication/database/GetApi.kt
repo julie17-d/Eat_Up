@@ -1,4 +1,5 @@
-package com.example.myapplication
+package com.example.myapplication.database
+import com.example.myapplication.HealthModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

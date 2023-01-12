@@ -1,4 +1,5 @@
-package com.example.myapplication
+package com.example.myapplication.`object`
+import com.example.myapplication.database.GetApi
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
