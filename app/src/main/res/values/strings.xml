@@ -24,10 +24,15 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="pasta">pasta</string>
     <string name="eat_ups">EAT UP</string>
-    <string name="registerd">Register</string>
+    <string name="registeredText">Register</string>
     <string name="full_name">Full name</string>
     <string name="registerBtn">Register</string>
     <string name="mail">Mail</string>
     <string name="eat_Up">EAT UP !</string>
     <string name="password">Password</string>
+    <string name="already_registered">Already registered</string>
+    <string name="loginText">Login</string>
+    <string name="loginbtn">LoginBtn</string>
+    <string name="don_t_have_an_account">Don\'t have an account</string>
+    <string name="logind">Login</string>
 </resources>
