@@ -49,7 +49,7 @@
         tools:text="EAT UP!" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login"
         android:layout_width="371dp"
         android:layout_height="48dp"
         android:layout_marginStart="21dp"

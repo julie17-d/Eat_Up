@@ -29,9 +29,9 @@
         android:layout_width="365dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="218dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="505dp"
+        android:layout_marginBottom="485dp"
         android:autofillHints="no"
         android:backgroundTint="#CCCCCC"
         android:drawableStart="@drawable/profile"
@@ -80,12 +80,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="118dp"
+        android:layout_marginTop="58dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="581dp"
+        android:layout_marginBottom="551dp"
         android:text="@string/registeredText"
         android:textColor="#F3EFEF"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -112,7 +113,7 @@
         app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449"
+        app:layout_constraintVertical_bias="0.436"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -134,23 +135,25 @@
         app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581"
+        app:layout_constraintVertical_bias="0.553"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/registerBtn"
+        android:id="@+id/logBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
-        android:layout_marginTop="584dp"
+        android:layout_marginTop="544dp"
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="99dp"
         android:background="@drawable/rounded_corner"
         android:text="@string/registerBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/alreadyReg"

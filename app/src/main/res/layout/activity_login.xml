@@ -109,7 +109,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/registerBtn"
+        android:id="@+id/logBtn"
         android:layout_width="138dp"
         android:layout_height="48dp"
         android:layout_marginStart="144dp"
