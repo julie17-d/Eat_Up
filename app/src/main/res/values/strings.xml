@@ -22,4 +22,12 @@
     <string name="register" />
     <string name="registers">Register</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="pasta">pasta</string>
+    <string name="eat_ups">EAT UP</string>
+    <string name="registerd">Register</string>
+    <string name="full_name">Full name</string>
+    <string name="registerBtn">Register</string>
+    <string name="mail">Mail</string>
+    <string name="eat_Up">EAT UP !</string>
+    <string name="password">Password</string>
 </resources>
