@@ -37,7 +37,7 @@
         android:shadowDx="15"
         android:shadowDy="15"
         android:shadowRadius="15"
-        android:text="@string/eat_Up"
+        android:text="@string/eatup"
         android:textAllCaps="true"
         android:textColor="#F1ECEC"
         android:textSize="60sp"

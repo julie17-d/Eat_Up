@@ -32,7 +32,7 @@
         android:shadowDx="15"
         android:shadowDy="15"
         android:shadowRadius="15"
-        android:text="@string/eat_up"
+        android:text="@string/eat_upss"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#EEF1EE"
@@ -46,7 +46,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.043"
-        tools:text="EAT UP!" />
+        tools:text="Eat UP!" />
 
     <Button
         android:id="@+id/login"
