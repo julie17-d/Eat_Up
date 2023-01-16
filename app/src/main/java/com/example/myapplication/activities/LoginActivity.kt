@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         login.setOnClickListener{
-            val intent = Intent(this, Home::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         register.setOnClickListener{
