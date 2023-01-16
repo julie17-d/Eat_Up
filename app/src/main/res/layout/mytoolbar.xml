@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="60dp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +14,8 @@
             android:layout_width="400dp"
             android:layout_height="48dp"
             android:layout_margin="10dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -23,7 +23,7 @@
                 android:layout_width="35dp"
                 android:layout_height="33dp"
                 android:background="@drawable/bg_white"
-                android:contentDescription="@string/back"
+                android:contentDescription="@string/backs"
                 android:padding="5dp"
                 android:src="?attr/actionModeCloseDrawable"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -34,26 +34,11 @@
                 app:layout_constraintVertical_bias="0.066"
                 app:tint="@color/teal_700" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="158dp"
-                android:layout_marginTop="5dp"
-                android:shadowColor="#496C21"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="5"
-                android:text="@string/eatupq"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="34dp"
-                android:layout_marginStart="345dp"
+                android:layout_marginStart="348dp"
                 android:layout_marginTop="1dp"
                 android:background="@drawable/bg_white"
                 android:contentDescription="@string/profile"
@@ -63,12 +48,41 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/teal_700" />
 
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="35dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/bg_white"
+                android:contentDescription="@string/profile"
+                android:padding="5dp"
+                android:src="@drawable/heart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/teal_700" />
+
+            <TextView
+                android:layout_width="78dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="157dp"
+                android:layout_marginTop="3dp"
+                android:shadowColor="#78DD05"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="@string/homed"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.cardview.widget.CardView>
