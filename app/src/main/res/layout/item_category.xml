@@ -24,22 +24,30 @@
 
             <ImageView
                 android:id="@+id/category_image"
-                android:layout_width="40dp"
+                android:layout_width="80dp"
                 android:layout_height="98dp"
-                android:layout_marginStart="9dp"
+                android:layout_marginStart="12dp"
                 android:contentDescription="@string/peanut"
-                app:tint="@color/white">
+                app:tint="@color/white"
+                android:src="@drawable/nut_free">
+
 
             </ImageView>
 
             <TextView
                 android:id="@+id/category_name"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="53dp"
+                android:layout_width="73dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="94dp"
                 android:layout_marginTop="5dp"
+                android:shadowColor="#FAEC73"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="Nut Free"
                 android:textAlignment="center"
                 android:textColor="@color/white"
+                android:textSize="15dp"
                 android:textStyle="bold">
 
             </TextView>
@@ -48,8 +56,8 @@
                 android:id="@+id/checkBox"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="54dp"
-                android:layout_marginTop="38dp"
+                android:layout_marginStart="114dp"
+                android:layout_marginTop="58dp"
                 android:buttonTint="@color/white"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
         </RelativeLayout>
