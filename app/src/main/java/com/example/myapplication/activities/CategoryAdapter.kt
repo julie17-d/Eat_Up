@@ -29,6 +29,6 @@ class CategoryAdapter(private val data: List<CategoryModel>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = data[position].name
         Log.e("data",data[0].name)
-        holder.image.setImageURI(data[position].image.toUri())
+        holder.image.setImageResource(data[position].image)
     }
 }
