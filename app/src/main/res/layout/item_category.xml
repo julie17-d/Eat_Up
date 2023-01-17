@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="110dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/purple_200"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="98dp"
+                android:layout_marginStart="9dp"
+                android:contentDescription="@string/peanut"
+                android:src="@drawable/nutFree"
+                app:tint="@color/white">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="53dp"
+                android:text="@string/peanutfree"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="38dp"
+                android:buttonTint="@color/white" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

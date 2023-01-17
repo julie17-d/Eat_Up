@@ -48,4 +48,6 @@
     <string name="top_recipesz">Top Recipes</string>
     <string name="search_for_new_recipes">Search for new recipes!</string>
     <string name="categoriesz">Categories</string>
+    <string name="peanutfree">PeanutFree</string>
+    <string name="peanut">peanut</string>
 </resources>
