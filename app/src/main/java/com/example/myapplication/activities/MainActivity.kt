@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.HealthModel
@@ -24,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val intent = Intent(this, second_page::class.java)
 
-        val recyclerViewCat : RecyclerView = findViewById(R.id.recycler_view_category)
-        recyclerViewCat.layoutManager = LinearLayoutManager(this)
-        recyclerViewCat.adapter = CategoryAdapter(categoryArray)
+        val recyclerView: RecyclerView = findViewById(R.id.recycler_view_category)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.adapter = CategoryAdapter(categoryArray)
 
         val searchBarText = findViewById<TextInputEditText>(R.id.textSearchB)
 
