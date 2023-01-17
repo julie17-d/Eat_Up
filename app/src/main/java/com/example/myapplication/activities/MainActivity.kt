@@ -1,13 +1,12 @@
 package com.example.myapplication.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.HealthModel
@@ -25,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intent = Intent(this, second_page::class.java)
-
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view_category)
 
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)

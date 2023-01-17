@@ -27,8 +27,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="275dp"
-        android:layout_marginTop="365dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="352dp"
         android:text="@string/top_recipesz"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -66,29 +66,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         android:elevation="5dp"
+        android:background="@null"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeColor="@android:color/transparent"
         android:imeOptions="actionSearch"
         app:layout_constraintBottom_toBottomOf="@id/toolbar"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textSearchB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:background="@drawable/bg_white"
-            android:drawableStart="@android:drawable/ic_menu_search"
-            android:drawablePadding="5dp"
-            android:drawableTint="@color/teal_700"
-            android:elevation="5dp"
-            android:hint="@string/search_for_new_recipes"
-            android:imeOptions="actionDone"
-            android:inputType="text"
-            android:padding="15dp"
-            android:textColor="@color/black"
-            android:textSize="13sp"
-            app:layout_constraintBottom_toBottomOf="@id/toolbar"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            tools:layout_editor_absoluteX="6dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -125,5 +109,27 @@
         android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textSearchB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_white"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="5dp"
+        android:elevation="5dp"
+        android:hint="@string/search_for_new_recipes"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxStrokeColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,13 +7,14 @@
     >
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardcat"
         android:layout_width="180dp"
         android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        app:cardBackgroundColor="@color/purple_200"
+        app:cardBackgroundColor="#2196F3"
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="@dimen/_10sdp">
 
@@ -28,26 +29,23 @@
                 android:layout_height="98dp"
                 android:layout_marginStart="12dp"
                 android:contentDescription="@string/peanut"
-                app:tint="@color/white"
-                android:src="@drawable/nut_free">
+                android:src="@drawable/nut_free"
+                app:tint="@color/white">
 
 
             </ImageView>
 
             <TextView
                 android:id="@+id/category_name"
-                android:layout_width="73dp"
-                android:layout_height="50dp"
+                android:layout_width="78dp"
+                android:layout_height="49dp"
                 android:layout_marginStart="94dp"
                 android:layout_marginTop="5dp"
-                android:shadowColor="#FAEC73"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="5"
+                android:fontFamily="@font/atma_semibold"
                 android:text="Nut Free"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="15dp"
+                android:textSize="17dp"
                 android:textStyle="bold">
 
             </TextView>
