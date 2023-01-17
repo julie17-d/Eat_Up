@@ -6,10 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.HealthModel
 import com.example.myapplication.R
 import com.example.myapplication.RecipeX
 import com.example.myapplication.`object`.Fetch
+import com.example.myapplication.database.categoryArray
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intent = Intent(this, second_page::class.java)
+
+        val recyclerViewCat : RecyclerView = findViewById(R.id.recycler_view_category)
+        with(recyclerViewCat) {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = CategoryAdapter(categoryArray, context)
+        }
 
         val searchBarText = findViewById<TextInputEditText>(R.id.textSearchB)
 
