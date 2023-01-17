@@ -7,7 +7,7 @@ val categoryArray = arrayListOf(
     CategoryModel("Gluten Free", "@drawable/glutenfree"),
     CategoryModel("Dairy Free", "@drawable/lactosefree"),
     CategoryModel("Alcohol Free", "@drawable/no_drinking"),
-    CategoryModel("Nut Free", "@drawable/nutFree"),
+    CategoryModel("Nut Free", "@drawable/nut_free"),
     CategoryModel("Vegan", "@drawable/vegan"),
     CategoryModel("Vegetarian", "@drawable/no_meat"),
     CategoryModel("Low Sugar", "@drawable/sugar"),

@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
                             val recipes = response.body()!!
                             Log.e("response", recipes.hits[0].recipe.label)
                             // Update UI with recipe data
+                            recipeListObject.recipeList.clear()
                             for (recipe in recipes.hits) {
                                 recipeListObject.recipeList.add(recipe.recipe)
                             }
@@ -68,5 +69,5 @@ class MainActivity : AppCompatActivity() {
 }
 
 object recipeListObject {
-    var recipeList : ArrayList<RecipeX> = ArrayList()
+    var recipeList : MutableList<RecipeX> = mutableListOf()
 }

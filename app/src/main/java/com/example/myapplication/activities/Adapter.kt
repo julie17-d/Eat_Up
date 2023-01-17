@@ -12,7 +12,7 @@ import com.example.myapplication.R
 import com.example.myapplication.RecipeX
 import com.example.myapplication.`object`.Utils
 
-class Adapter(private val recipeList: ArrayList<RecipeX>, private val context: Context)
+class Adapter(private val recipeList: MutableList<RecipeX>, private val context: Context)
     : RecyclerView.Adapter<Adapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return(ViewHolder(
