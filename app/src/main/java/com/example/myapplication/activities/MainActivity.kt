@@ -8,6 +8,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import com.example.myapplication.HealthModel
 import com.example.myapplication.R
+import com.example.myapplication.RecipeX
 import com.example.myapplication.`object`.Fetch
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
@@ -57,4 +58,8 @@ class MainActivity : AppCompatActivity() {
             false
         })
     }
+}
+
+object recipeListObject {
+    var recipeList : ArrayList<RecipeX> = ArrayList()
 }
