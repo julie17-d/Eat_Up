@@ -1,42 +1,32 @@
 package com.example.myapplication.activities
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.example.myapplication.R
-import com.example.myapplication.RecipeX
-import com.example.myapplication.`object`.Utils
-import com.example.myapplication.activities.recipeListObject.recipeList
-import java.util.Locale.Category
+import com.example.myapplication.models.CategoryModel
 
-class CategoryAdapter(private val categoryList: ArrayList<Array<String>>, private val context: Context)
-    : RecyclerView.Adapter<Adapter.ViewHolder>(){
+class CategoryAdapter(private val data: List<CategoryModel>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val name: TextView = itemView.findViewById(R.id.category_name)
+        val image: ImageView = itemView.findViewById(R.id.category_image)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return(ViewHolder(
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_recipe, parent, false)
-        ))
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_category, parent, false)
+        return ViewHolder(view)
     }
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.category_image)
-        val nameView: TextView = itemView.findViewById(R.id.category_name)
-        fun bind(recipe: RecipeX) {
-            imageView.setImageURI(categoryList)
-            nameView.text = recipe.label
-        }
+
+    override fun getItemCount(): Int {
+        return data.size
     }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val recipe : RecipeX = recipeList[position]
-        holder.bind(recipe)
-        holder.itemView.setOnClickListener {
-            // Ouvre le lien dans un navigateur
-            Utils.openBrowser(context, recipe.url)
-        }
+        holder.name.text = data[position].name
+        holder.image.setImageURI(data[position].image.toUri())
     }
-    override fun getItemCount(): Int = recipeList.size
 }

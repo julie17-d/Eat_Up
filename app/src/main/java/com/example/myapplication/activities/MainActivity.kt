@@ -25,10 +25,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, second_page::class.java)
 
         val recyclerViewCat : RecyclerView = findViewById(R.id.recycler_view_category)
-        with(recyclerViewCat) {
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = CategoryAdapter(categoryArray, context)
-        }
+        recyclerViewCat.layoutManager = LinearLayoutManager(this)
+        recyclerViewCat.adapter = CategoryAdapter(categoryArray)
 
         val searchBarText = findViewById<TextInputEditText>(R.id.textSearchB)
 

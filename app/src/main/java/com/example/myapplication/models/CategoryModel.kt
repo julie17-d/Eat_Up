@@ -1,6 +1,7 @@
 package com.example.myapplication.models
 
-data class CategoryModel {
+data class CategoryModel (
     val name: String,
-            val image: String
-}
+    val image: String
+        )
+
