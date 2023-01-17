@@ -39,4 +39,13 @@
     <string name="eat_upss">Eat Up!</string>
     <string name="profile">profile</string>
     <string name="eatupz">EatUP !</string>
+    <string name="salad1" />
+    <string name="top_recipes" />
+    <string name="salad2" />
+    <string name="categories" />
+    <string name="back">back</string>
+    <string name="homez">HOME</string>
+    <string name="top_recipesz">Top Recipes</string>
+    <string name="search_for_new_recipes">Search for new recipes!</string>
+    <string name="categoriesz">Categories</string>
 </resources>

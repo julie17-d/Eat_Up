@@ -4,7 +4,8 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface GetApi {
+interface
+GetApi {
     @GET("v2")
     fun getHealthModel(
         @Query("q") q: String,
