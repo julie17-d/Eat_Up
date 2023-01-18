@@ -13,6 +13,7 @@
         android:layout_width="414dp"
         android:layout_height="729dp"
         android:layout_marginStart="-140dp"
+        android:layout_margin="5dp"
         android:contentDescription="@string/salad1"
         android:tint="#60F8F2F2"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +115,7 @@
         android:layout_width="408dp"
         android:layout_height="73dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="58dp"
         android:background="#E6FBFBFB"
         android:backgroundTint="#F5F6F3"
         android:text="    Hello Julie,"
@@ -129,23 +130,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="90dp"
         android:text="@string/discover_new_and_healthy_recipes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/profile"
         android:layout_width="49dp"
         android:layout_height="47dp"
         android:layout_marginStart="336dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/bg_green"
         android:contentDescription="@string/profilez"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/profile"
         app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="34dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        app:tint="@color/teal_700" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_top"
@@ -164,6 +177,12 @@
         <include
             android:id="@+id/include_bottom_nav"
             layout="@layout/bottom_nav" />
+
+        <include
+            android:id="@+id/include_bottom_nav"
+            layout="@layout/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 
