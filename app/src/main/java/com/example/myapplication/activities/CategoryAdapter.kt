@@ -29,7 +29,7 @@ class CategoryAdapter(private val data: List<CategoryModel>) : RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val colors = intArrayOf(Color.parseColor("#F6E448"),Color.parseColor("#00BCD4"),Color.parseColor("#EC6767"),Color.parseColor("#86BF44"),Color.parseColor("#40B344"))
+        val colors = intArrayOf(Color.parseColor("#EC6767"),Color.parseColor("#86BF44"),Color.parseColor("#F6E448"),Color.parseColor("#40B344"),Color.parseColor("#EF8809"),Color.parseColor("#36A33A"))
 
         holder.name.text = data[position].name
         Log.e("data",data[0].name)

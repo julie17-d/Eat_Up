@@ -27,9 +27,8 @@
                 android:id="@+id/category_image"
                 android:layout_width="80dp"
                 android:layout_height="98dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="10dp"
                 android:contentDescription="@string/peanut"
-                android:src="@drawable/nut_free"
                 app:tint="@color/white">
 
 
@@ -37,15 +36,14 @@
 
             <TextView
                 android:id="@+id/category_name"
-                android:layout_width="78dp"
+                android:layout_width="80dp"
                 android:layout_height="49dp"
-                android:layout_marginStart="94dp"
+                android:layout_marginStart="92dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/atma_semibold"
-                android:text="Nut Free"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold">
 
             </TextView>
