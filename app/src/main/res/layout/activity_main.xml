@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="470dp"
         android:text="@string/top_recipesz"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -69,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="256dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="208dp"
         android:text="@string/categoriesz"
 
         android:textColor="#C31C1B1B"
@@ -80,8 +80,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_category"
-        android:layout_width="414dp"
-        android:layout_height="160dp"
+        android:layout_width="406dp"
+        android:layout_height="204dp"
         android:layout_marginTop="1dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,39 +147,9 @@
         app:srcCompat="@drawable/profile"
         app:tint="@color/white" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="362dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="11dp"
-        android:background="#C8EDE3E3"
-        android:backgroundTint="#DDEFE6E6"
-        android:fontFamily="casual"
-        android:text="@string/apples_can_reduce_high_levels_of_cholesterol_to_keep_your_heart_healthy"
-        android:textColor="#E81F10"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:background="#F1EEEE"
-        android:text="@string/health_fact_of_the_day"
-        android:textColor="#95020202"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSearchB" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_top"
-        android:layout_width="411dp"
+        android:layout_width="406dp"
         android:layout_height="134dp"
         android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
