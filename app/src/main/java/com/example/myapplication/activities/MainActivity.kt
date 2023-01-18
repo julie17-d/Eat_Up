@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.adapter = CategoryAdapter(categoryArray)
 
+
+
         val searchBarText = findViewById<TextInputEditText>(R.id.textSearchB)
 
         searchBarText.setOnEditorActionListener(TextView.OnEditorActionListener{ _, actionId, _ ->
