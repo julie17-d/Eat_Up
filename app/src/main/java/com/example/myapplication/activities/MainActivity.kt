@@ -1,7 +1,6 @@
 package com.example.myapplication.activities
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
@@ -13,6 +12,7 @@ import com.example.myapplication.HealthModel
 import com.example.myapplication.R
 import com.example.myapplication.RecipeX
 import com.example.myapplication.`object`.Fetch
+import com.example.myapplication.adapters.CategoryAdapter
 import com.example.myapplication.database.categoryArray
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call

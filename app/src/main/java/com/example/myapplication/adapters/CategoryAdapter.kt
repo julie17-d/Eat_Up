@@ -1,4 +1,4 @@
-package com.example.myapplication.activities
+package com.example.myapplication.adapters
 
 import android.graphics.Color
 import android.util.Log

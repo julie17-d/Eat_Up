@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
+import com.example.myapplication.adapters.Adapter
 
 class second_page : AppCompatActivity() {
     //var recipeList : ArrayList<RecipeX> = ArrayList()
