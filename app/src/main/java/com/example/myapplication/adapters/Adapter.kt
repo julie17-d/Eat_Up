@@ -23,11 +23,9 @@ class Adapter(private val recipeList: ArrayList<RecipeX>, private val context: C
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.image)
         val labelView: TextView = itemView.findViewById(R.id.label)
-        val cuisineTypeView : TextView = itemView.findViewById(R.id.cuisine_type)
         fun bind(recipe: RecipeX) {
             imageView.load(recipe.image)
             labelView.text = recipe.label
-            cuisineTypeView.text = recipe.dishType.toString()
         }
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
