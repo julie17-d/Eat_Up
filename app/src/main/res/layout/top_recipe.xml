@@ -41,8 +41,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/star5"
                 android:layout_width="22dp"
                 android:layout_height="26dp"
                 android:layout_marginTop="8dp"
@@ -52,7 +53,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/star2"
                 android:layout_width="22dp"
                 android:layout_height="26dp"
                 android:layout_marginTop="8dp"
@@ -62,7 +63,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/star3"
                 android:layout_width="22dp"
                 android:layout_height="26dp"
                 android:layout_marginTop="8dp"
@@ -72,7 +73,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView12"
+                android:id="@+id/star4"
                 android:layout_width="22dp"
                 android:layout_height="26dp"
                 android:layout_marginTop="8dp"
@@ -82,7 +83,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/star5"
                 android:layout_width="22dp"
                 android:layout_height="26dp"
                 android:layout_marginTop="8dp"

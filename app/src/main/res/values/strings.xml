@@ -57,4 +57,5 @@
     <string name="health_fact_of_the_day">Health Fact of the day</string>
     <string name="_5_0">5.0</string>
     <string name="picture_of_the_dish">picture of the dish</string>
+    <string name="favorite">favorite</string>
 </resources>

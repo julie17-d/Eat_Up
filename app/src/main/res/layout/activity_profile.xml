@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Profile"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="67dp">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="414dp"
+        android:layout_height="57dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Your other layout elements -->
+
+
+        <include
+            android:id="@+id/include_bottom_nav"
+            layout="@layout/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="342dp"
+        android:layout_height="234dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/bg_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/bg_green"
+        android:text="Username :"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="92dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="42dp"
+
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_green"
+        android:text="Password : "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="257dp"
+        android:layout_height="402dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="382dp"
+        android:backgroundTint="#450C0B0B"
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/green" />
+
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="24dp"
+        android:text="Health Info :"
+        android:textColor="@color/teal_700"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+
+        android:layout_marginTop="397dp"
+        android:background="@drawable/bg_green"
+        android:text="Height :"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="431dp"
+        android:background="@drawable/bg_green"
+        android:text="Age :"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+
+        android:layout_marginTop="469dp"
+        android:background="@drawable/bg_green"
+        android:text="Filters :"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hplaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="183dp"
+        android:layout_marginTop="397dp"
+
+        android:background="@drawable/bg_green"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/aplaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="183dp"
+
+        android:layout_marginTop="431dp"
+        android:background="@drawable/bg_green"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fplaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="183dp"
+        android:layout_marginTop="469dp"
+        android:background="@drawable/bg_green"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="224dp"
+        android:layout_height="401dp"
+        android:layout_marginBottom="484dp"
+        android:rotation="48"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/smoothie" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

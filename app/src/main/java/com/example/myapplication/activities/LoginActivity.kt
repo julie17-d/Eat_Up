@@ -18,11 +18,11 @@ class LoginActivity : AppCompatActivity() {
 
 
         login.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+     Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         register.setOnClickListener{
-            val intent = Intent(this, RegistrationActivity::class.java)
+          Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }
 
