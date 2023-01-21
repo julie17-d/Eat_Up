@@ -5,23 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.Recipe">
+
     <ImageView
         android:id="@+id/liked"
         android:layout_width="35dp"
         android:layout_height="34dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/bg_white"
         android:contentDescription="@string/favorite"
+        android:elevation="10dp"
         android:padding="5dp"
         android:src="@drawable/heart"
-        android:layout_marginTop="15dp"
-        android:elevation="10dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:contentDescription="@string/picture_of_the_dish"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
         android:layout_width="414dp"
         android:layout_height="57dp"
@@ -43,19 +48,21 @@
         android:id="@+id/textView6"
         android:layout_width="266dp"
         android:layout_height="43dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/bg_green"
         android:text="See Recipe"
         android:textAlignment="center"
         android:textColor="#F6F2F2"
         android:textSize="24sp"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="333dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image">
 
     </TextView>
 
     <ImageView
-        android:id="@+id/star5"
+        android:id="@+id/star10"
         android:layout_width="22dp"
         android:layout_height="26dp"
         android:layout_marginTop="8dp"
@@ -65,7 +72,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/star4"
+        android:id="@+id/star9"
         android:layout_width="22dp"
         android:layout_height="26dp"
         android:layout_marginTop="8dp"
@@ -75,7 +82,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/star3"
+        android:id="@+id/star8"
         android:layout_width="22dp"
         android:layout_height="26dp"
         android:layout_marginTop="8dp"
@@ -85,7 +92,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/star2"
+        android:id="@+id/star7"
         android:layout_width="22dp"
         android:layout_height="26dp"
         android:layout_marginTop="8dp"
@@ -95,7 +102,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/star1"
+        android:id="@+id/star6"
         android:layout_width="22dp"
         android:layout_height="26dp"
         android:layout_marginTop="8dp"
@@ -108,20 +115,24 @@
         android:id="@+id/Ingrediants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="59dp"
         android:text="Ingrediants :"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="435dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/Nutrition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="187dp"
         android:text="Nutrition Facts"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="563dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

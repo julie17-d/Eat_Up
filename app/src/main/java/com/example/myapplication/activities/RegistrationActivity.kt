@@ -16,12 +16,12 @@ class RegistrationActivity : AppCompatActivity() {
         val register = findViewById<Button>(R.id.logBtn)
         val login = findViewById<TextView>(R.id.alreadyReg)
         register.setOnClickListener{
-        Intent(this, MainActivity::class.java)
+            val intent =Intent(this, Questionnaire::class.java)
             startActivity(intent)
         }
         login.setOnClickListener{
 
-            Intent(this, LoginActivity::class.java)
+            val intent =Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
