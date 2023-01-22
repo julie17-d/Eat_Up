@@ -1,5 +1,5 @@
 package com.example.myapplication.database
-import com.example.myapplication.HealthModel
+import com.example.myapplication.models.HealthModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

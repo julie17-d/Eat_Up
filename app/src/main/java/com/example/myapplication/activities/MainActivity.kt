@@ -4,13 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.HealthModel
+import com.example.myapplication.models.HealthModel
 import com.example.myapplication.R
-import com.example.myapplication.RecipeX
+import com.example.myapplication.ViewModel.MainViewModel
+import com.example.myapplication.models.RecipeX
 import com.example.myapplication.`object`.Fetch
 import com.example.myapplication.adapters.CategoryAdapter
 import com.example.myapplication.database.categoryArray
@@ -39,7 +42,6 @@ class MainActivity : AppCompatActivity() {
                 val query = searchBarText.text.toString()
                 Log.e("query", query)
                 val fetch = Fetch.service
-                // val response = fetch.getRecipes("chicken", "bf609ed4", "12b3eea3417cea7f8b96953e19937f56", "public")
                 val call = fetch.getHealthModel(query, "bf609ed4", "12b3eea3417cea7f8b96953e19937f56", "public")
 
                 call.enqueue(object : Callback<HealthModel> {
@@ -67,6 +69,29 @@ class MainActivity : AppCompatActivity() {
             }
             false
         })
+
+        val home = findViewById<ImageView>(R.id.home)
+        home.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        val back = findViewById<ImageView>(R.id.back)
+        back.setOnClickListener {
+            val intent = Intent(this, Welcome::class.java)
+            startActivity(intent)
+        }
+        val profile = findViewById<ImageView>(R.id.profileImg)
+        profile.setOnClickListener {
+            Log.e("ff","ff")
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
+
+        val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        val best = viewModel.getRecipes("best")
+        val recyclerView2: RecyclerView = findViewById(R.id.top_recycler)
+
+
     }
 }
 

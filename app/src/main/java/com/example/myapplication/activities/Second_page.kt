@@ -1,7 +1,11 @@
 package com.example.myapplication.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintSet.Layout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
@@ -17,6 +21,12 @@ class second_page : AppCompatActivity() {
         with(recyclerView) {
             layoutManager = LinearLayoutManager(this@second_page)
             adapter = Adapter(recipeListObject.recipeList, context)
+
+        }
+        val back = findViewById<ImageView>(R.id.backUp)
+        back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
     /*override fun onCreate(savedInstanceState: Bundle?) {

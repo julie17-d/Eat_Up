@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/greenSal"
         android:layout_width="414dp"
         android:layout_height="729dp"
         android:layout_margin="5dp"
@@ -22,7 +22,7 @@
         tools:ignore="UseAppTint,ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/topRec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/pan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="-200dp"
@@ -42,7 +42,7 @@
         android:contentDescription="@string/salad2"
         android:tint="#51FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/greenSal"
         app:srcCompat="@drawable/jump"
         tools:ignore="UseAppTint" />
 
@@ -58,13 +58,11 @@
         android:imeOptions="actionSearch"
         app:boxBackgroundColor="@android:color/transparent"
         app:boxStrokeColor="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintBottom_toTopOf="@+id/greenSal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </com.google.android.material.textfield.TextInputLayout>
-
-
 
 
     <com.google.android.material.textfield.TextInputEditText
@@ -86,10 +84,11 @@
         android:textSize="13sp"
         app:boxBackgroundColor="@android:color/transparent"
         app:boxStrokeColor="@android:color/transparent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/greenSal"
         app:layout_constraintTop_toBottomOf="@+id/hellojulie" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Categories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="256dp"
@@ -109,7 +108,7 @@
         android:layout_marginTop="1dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/Categories" />
 
     <TextView
         android:id="@+id/hellojulie"
@@ -174,6 +173,14 @@
 
 
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/top_recycler"
+        android:layout_width="412dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

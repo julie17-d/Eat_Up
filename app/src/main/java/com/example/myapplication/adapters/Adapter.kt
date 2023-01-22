@@ -7,14 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.myapplication.R
-import com.example.myapplication.RecipeX
-import com.example.myapplication.`object`.Utils
+import com.example.myapplication.models.RecipeX
 import com.example.myapplication.activities.Recipe
-import com.example.myapplication.activities.RegistrationActivity
 
 class Adapter(private val recipeList: ArrayList<RecipeX>, private val context: Context)
     : RecyclerView.Adapter<Adapter.ViewHolder>(){

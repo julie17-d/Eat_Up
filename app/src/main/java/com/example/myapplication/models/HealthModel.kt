@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.models
 
 
 data class HealthModel(
@@ -11,6 +11,7 @@ data class HealthModel(
 data class Hit(
     val recipe: RecipeX
 )
+
 
 data class RecipeX(
     val calories: Double,
