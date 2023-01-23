@@ -1,11 +1,13 @@
 package com.example.myapplication.activities
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +19,7 @@ import com.example.myapplication.models.RecipeX
 import com.example.myapplication.`object`.Fetch
 import com.example.myapplication.adapters.CategoryAdapter
 import com.example.myapplication.database.categoryArray
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -90,6 +93,20 @@ class MainActivity : AppCompatActivity() {
         val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         val best = viewModel.getRecipes("best")
         val recyclerView2: RecyclerView = findViewById(R.id.top_recycler)
+        val messages = listOf("Les mêmes ingrédients dans les vinaigrettes et les écrans solaires", "Du soda qui résiste au feu", "Du café champion des antioxydants","De la bière anti-caries","An avocado has more than twice as much potassium as a banana.","one lemon contains your daily dose of vitamin C, it cleanses the liver, boosts your immunity and aids in weight loss."
+                )
+        val facts = findViewById<FloatingActionButton>(R.id.notification_facts)
+        facts.setOnClickListener {
+            val randomMessage = messages.random()
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Pop-up Title")
+            builder.setMessage(randomMessage)
+            builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+            })
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+
 
 
     }

@@ -7,7 +7,6 @@
     android:background="#F1EFEF"
     tools:context=".activities.MainActivity">
 
-
     <ImageView
         android:id="@+id/greenSal"
         android:layout_width="414dp"
@@ -22,7 +21,7 @@
         tools:ignore="UseAppTint,ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/topRec"
+        android:id="@+id/topRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -170,6 +169,25 @@
         <include
             android:id="@+id/include_bottom_nav"
             layout="@layout/bottom_nav" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/notification_facts"
+            android:layout_width="54dp"
+            android:layout_height="55dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/lightbulb"
+            app:backgroundTint="@color/purple_200"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="-150dp"
+            tools:ignore="MissingConstraints"
+            app:layout_anchorGravity="bottom|end"/>
+
 
 
     </LinearLayout>
