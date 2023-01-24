@@ -17,7 +17,9 @@ import com.example.myapplication.R
 import com.example.myapplication.ViewModel.MainViewModel
 import com.example.myapplication.models.RecipeX
 import com.example.myapplication.`object`.Fetch
+import com.example.myapplication.adapters.Adapter
 import com.example.myapplication.adapters.CategoryAdapter
+import com.example.myapplication.adapters.TopRecipeAdapter
 import com.example.myapplication.database.categoryArray
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
@@ -30,15 +32,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intent = Intent(this, second_page::class.java)
-        val recyclerView: RecyclerView = findViewById(R.id.recycler_view_category)
+        val intent2 = Intent(this, MainActivity::class.java)
 
+
+        //category rv
+        val recyclerView: RecyclerView = findViewById(R.id.recycler_view_category)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.adapter = CategoryAdapter(categoryArray)
 
 
-
+        // search bar
         val searchBarText = findViewById<TextInputEditText>(R.id.textSearchB)
-
         searchBarText.setOnEditorActionListener(TextView.OnEditorActionListener{ _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 Log.e("test", "it works!")
@@ -73,6 +77,18 @@ class MainActivity : AppCompatActivity() {
             false
         })
 
+        //2nd RV
+
+
+        val recyclerView2 : RecyclerView = findViewById(R.id.top_recycler)
+        with(recyclerView2) {
+            layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+            adapter = TopRecipeAdapter(topRecipeListObject.topRecipeList, context)
+
+        }
+
+
+        //routes
         val home = findViewById<ImageView>(R.id.home)
         home.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -90,16 +106,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        val best = viewModel.getRecipes("best")
-        val recyclerView2: RecyclerView = findViewById(R.id.top_recycler)
-        val messages = listOf("Les mêmes ingrédients dans les vinaigrettes et les écrans solaires", "Du soda qui résiste au feu", "Du café champion des antioxydants","De la bière anti-caries","An avocado has more than twice as much potassium as a banana.","one lemon contains your daily dose of vitamin C, it cleanses the liver, boosts your immunity and aids in weight loss."
+
+
+        //facts
+        val messages = listOf("Les mêmes ingrédients sont dans les vinaigrettes et les écrans solaires", "Le soda résiste au feu", "Le café est le champion des antioxydants","La bière est un anti-caries","An avocado has more than twice as much potassium as a banana.","one lemon contains your daily dose of vitamin C, it cleanses the liver, boosts your immunity and aids in weight loss."
                 )
         val facts = findViewById<FloatingActionButton>(R.id.notification_facts)
         facts.setOnClickListener {
             val randomMessage = messages.random()
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Pop-up Title")
+            builder.setTitle("Health Fact")
             builder.setMessage(randomMessage)
             builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
             })
@@ -115,3 +131,6 @@ class MainActivity : AppCompatActivity() {
 object recipeListObject {
     var recipeList : ArrayList<RecipeX> = ArrayList()
 }
+
+
+
