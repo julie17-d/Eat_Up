@@ -178,11 +178,6 @@
             android:id="@+id/include_bottom_nav"
             layout="@layout/bottom_nav" />
 
-        <include
-            android:id="@+id/include_bottom_nav"
-            layout="@layout/bottom_nav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 
 
