@@ -9,15 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.models.HealthModel
 import com.example.myapplication.R
-import com.example.myapplication.ViewModel.MainViewModel
 import com.example.myapplication.models.RecipeX
 import com.example.myapplication.`object`.Fetch
-import com.example.myapplication.adapters.Adapter
 import com.example.myapplication.adapters.CategoryAdapter
 import com.example.myapplication.adapters.TopRecipeAdapter
 import com.example.myapplication.database.categoryArray
@@ -32,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intent = Intent(this, second_page::class.java)
-        val intent2 = Intent(this, MainActivity::class.java)
 
 
         //category rv
@@ -91,19 +87,19 @@ class MainActivity : AppCompatActivity() {
         //routes
         val home = findViewById<ImageView>(R.id.home)
         home.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val intentHome = Intent(this, MainActivity::class.java)
+            startActivity(intentHome)
         }
-        val back = findViewById<ImageView>(R.id.back)
+       /* val back = findViewById<ImageView>(R.id.back)
         back.setOnClickListener {
-            val intent = Intent(this, Welcome::class.java)
-            startActivity(intent)
-        }
+            val intentBack = Intent(this, Welcome::class.java)
+            startActivity(intentBack)
+        }*/
         val profile = findViewById<ImageView>(R.id.profileImg)
         profile.setOnClickListener {
             Log.e("ff","ff")
-            val intent = Intent(this, Profile::class.java)
-            startActivity(intent)
+            val intentProfile = Intent(this, Profile::class.java)
+            startActivity(intentProfile)
         }
 
 
@@ -117,7 +113,7 @@ class MainActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Health Fact")
             builder.setMessage(randomMessage)
-            builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+            builder.setPositiveButton("OK", DialogInterface.OnClickListener { _, _ ->
             })
             val dialog: AlertDialog = builder.create()
             dialog.show()

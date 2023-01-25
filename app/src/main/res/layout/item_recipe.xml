@@ -23,7 +23,7 @@
        />
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/recipe_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/picture_of_the_dish"

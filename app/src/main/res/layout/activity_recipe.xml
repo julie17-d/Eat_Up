@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/teal_700"
     android:layout_height="match_parent"
     tools:context=".activities.Recipe">
 
@@ -20,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/recipe_image"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:contentDescription="@string/picture_of_the_dish"
@@ -45,11 +46,27 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="266dp"
-        android:layout_height="43dp"
+        android:id="@+id/title_recipe"
+        android:layout_width="257dp"
+        android:layout_height="33dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/bg_green"
+        android:textAlignment="center"
+        android:textColor="#F6F2F2"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_image">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="257dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/bg_green"
         android:text="See Recipe"
         android:textAlignment="center"
@@ -57,7 +74,7 @@
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image">
+        app:layout_constraintTop_toBottomOf="@+id/recipe_image">
 
     </TextView>
 
@@ -116,12 +133,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="49dp"
         android:text="Ingrediants :"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/title_recipe" />
 
     <TextView
         android:id="@+id/Nutrition"
@@ -130,9 +148,26 @@
         android:layout_marginStart="143dp"
         android:layout_marginTop="187dp"
         android:text="Nutrition Facts"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/title_recipe" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="372dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ingrediants" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nutrition" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

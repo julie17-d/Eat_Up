@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@drawable/bg_green"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#4DCF52"
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="50dp"
         app:fabCradleVerticalOffset="6dp">
