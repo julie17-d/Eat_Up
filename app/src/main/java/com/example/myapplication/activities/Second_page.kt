@@ -10,6 +10,7 @@ import com.example.myapplication.R
 import com.example.myapplication.adapters.Adapter
 
 class second_page : AppCompatActivity() {
+
     //var recipeList : ArrayList<RecipeX> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

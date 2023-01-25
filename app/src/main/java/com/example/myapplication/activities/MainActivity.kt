@@ -11,12 +11,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import coil.Coil
+import coil.ImageLoader
 import com.example.myapplication.models.HealthModel
 import com.example.myapplication.R
 import com.example.myapplication.models.RecipeX
 import com.example.myapplication.`object`.Fetch
 import com.example.myapplication.adapters.CategoryAdapter
 import com.example.myapplication.adapters.TopRecipeAdapter
+import com.example.myapplication.adapters.ingRecipeListObject
 import com.example.myapplication.database.categoryArray
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
@@ -24,12 +27,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intent = Intent(this, second_page::class.java)
-
 
         //category rv
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view_category)
@@ -53,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                         response: Response<HealthModel>
                     ) {
                         if (response.isSuccessful) {
+                            recipeListObject.recipeList.clear()
                             Log.e("success", "success")
 
                             val recipes = response.body()!!

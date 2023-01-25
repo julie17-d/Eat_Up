@@ -12,13 +12,10 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.myapplication.R
-import com.example.myapplication.`object`.Fetch
 import com.example.myapplication.models.RecipeX
 import com.example.myapplication.activities.Recipe
-import com.example.myapplication.models.HealthModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.example.myapplication.models.Ingredient
+
 
 class TopRecipeAdapter(private val topRecipeList: ArrayList<RecipeX>, private val context: Context)
     : RecyclerView.Adapter<TopRecipeAdapter.ViewHolder>(){
@@ -42,37 +39,19 @@ class TopRecipeAdapter(private val topRecipeList: ArrayList<RecipeX>, private va
         val recipe : RecipeX = topRecipeList[position]
         holder.bind(recipe)
         holder.imageView.setOnClickListener {
-
-            Log.e("recipe", recipe.label)
-            val query = recipe.label
-            Log.e("query", query)
-            val fetch = Fetch.service
-            val call = fetch.getHealthModel(query, "bf609ed4", "12b3eea3417cea7f8b96953e19937f56", "public")
-
-            call.enqueue(object : Callback<HealthModel> {
-                override fun onResponse(
-                    call: Call<HealthModel>,
-                    response: Response<HealthModel>
-                ) {
-                    if (response.isSuccessful) {
-                        Log.e("success", "success")
-
-                        val recipes = response.body()!!
-                        Log.e("response", recipes.hits[0].recipe.ingredients.toString())
-                        // Update UI with recipe data
-                        val intent = Intent(context, Recipe::class.java)
-                        context.startActivity(intent)
-                    }
-                }
-                override fun onFailure(call: Call<HealthModel>, t: Throwable) {
-                    Log.e("fail", t.message.toString())
-                }
-            })
+            ingRecipeListObject.ingRecipeList.clear()
+            for (ing in recipe.ingredients) {
+                ingRecipeListObject.ingRecipeList.add(ing)
+            }
+            Log.e("ingredients", ingRecipeListObject.ingRecipeList[0].image)
+            val intent = Intent(context, Recipe::class.java)
+            context.startActivity(intent)
             // Ouvre le lien dans un navigateur
-
-
             //    Utils.openBrowser(context, recipe.url)
         }
     }
     override fun getItemCount(): Int = topRecipeList.size
+}
+object ingRecipeListObject {
+    var ingRecipeList : ArrayList<Ingredient> = ArrayList()
 }
