@@ -7,6 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 object Fetch {
+
     private var gson: Gson = GsonBuilder()
         .setLenient()
         .create()

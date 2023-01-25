@@ -1,5 +1,6 @@
 package com.example.myapplication.adapters
 
+import android.content.Intent
 import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
+import com.example.myapplication.activities.Recipe
 import com.example.myapplication.models.CategoryModel
 
 class CategoryAdapter(private val data: List<CategoryModel>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
@@ -32,6 +34,11 @@ class CategoryAdapter(private val data: List<CategoryModel>) : RecyclerView.Adap
         val colors = intArrayOf(Color.parseColor("#EC6767"),Color.parseColor("#86BF44"),Color.parseColor("#F6E448"),Color.parseColor("#40B344"),Color.parseColor("#EF8809"),Color.parseColor("#2A6D2D"))
 
         holder.name.text = data[position].name
+        holder.name.setOnClickListener {
+            // Ouvre le lien dans un navigateur
+          Log.e("click", holder.name.text.toString())
+            //    Utils.openBrowser(context, recipe.url)
+        }
         Log.e("data",data[0].name)
         holder.image.setImageResource(data[position].image)
         holder.cardView.setCardBackgroundColor(colors[position % colors.size])

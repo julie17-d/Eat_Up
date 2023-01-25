@@ -4,45 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F1EFEF"
+    android:background="#5E9F62"
     tools:context=".activities.MainActivity">
 
-
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="414dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="-140dp"
-        android:layout_margin="5dp"
+        android:id="@+id/greenSal"
+        android:layout_width="305dp"
+        android:layout_height="319dp"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/salad1"
-        android:tint="#60F8F2F2"
+        android:tint="#4A0E0E0E"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/salad"
         tools:ignore="UseAppTint,ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/topRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="400dp"
         android:text="@string/top_recipesz"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/pan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-100dp"
-        android:layout_marginBottom="-200dp"
+        android:layout_marginStart="-300dp"
+        android:layout_marginBottom="-100dp"
         android:contentDescription="@string/salad2"
-        android:tint="#51FFFFFF"
+        android:rotation="-46"
+        android:tint="#43151414"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="parent"
         app:srcCompat="@drawable/jump"
         tools:ignore="UseAppTint" />
 
@@ -58,43 +59,19 @@
         android:imeOptions="actionSearch"
         app:boxBackgroundColor="@android:color/transparent"
         app:boxStrokeColor="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintBottom_toTopOf="@+id/greenSal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="208dp"
-        android:text="@string/categoriesz"
-
-        android:textColor="#C31C1B1B"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_category"
-        android:layout_width="406dp"
-        android:layout_height="204dp"
-        android:layout_marginTop="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textSearchB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="-190dp"
         android:background="@drawable/bg_white"
         android:drawableStart="@android:drawable/ic_menu_search"
         android:drawablePadding="5dp"
@@ -107,40 +84,51 @@
         android:textSize="13sp"
         app:boxBackgroundColor="@android:color/transparent"
         app:boxStrokeColor="@android:color/transparent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/hellojulie" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/hellojulie"
-        android:layout_width="408dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="58dp"
-        android:background="#E6FBFBFB"
-        android:backgroundTint="#F5F6F3"
-        android:text="    Hello Julie,"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
+        android:id="@+id/Categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="238dp"
+        android:text="@string/categoriesz"
+        android:textColor="#FAFBFA"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_category"
+        android:layout_width="406dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Categories" />
+
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="90dp"
-        android:text="@string/discover_new_and_healthy_recipes"
+        android:id="@+id/hellojulie"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="53dp"
+        android:text="Hello Julie!"
+        android:textColor="#F9FAF9"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/profile"
-        android:layout_width="49dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="346dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg_green"
         android:contentDescription="@string/profilez"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,26 +136,11 @@
         app:srcCompat="@drawable/profile"
         app:tint="@color/white" />
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="34dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back"
-        app:tint="@color/teal_700" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_top"
-        android:layout_width="406dp"
-        android:layout_height="134dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -178,7 +151,35 @@
             android:id="@+id/include_bottom_nav"
             layout="@layout/bottom_nav" />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/notification_facts"
+            android:layout_width="54dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-720dp"
+            android:clickable="true"
+            android:contentDescription="@string/action_settings"
+            app:backgroundTint="@color/purple_200"
+            app:layout_anchorGravity="bottom|end"
+            app:srcCompat="@drawable/lightbulb"
+            tools:ignore="MissingConstraints" />
+
+
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/top_recycler"
+        android:layout_width="422dp"
+        android:layout_height="290dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

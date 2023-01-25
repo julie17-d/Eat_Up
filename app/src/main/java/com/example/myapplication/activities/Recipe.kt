@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.R
 
-class CategoryRecipe : AppCompatActivity() {
+class Recipe : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_category_recipe)
-
-
-
+        setContentView(R.layout.activity_recipe)
     }
 }
